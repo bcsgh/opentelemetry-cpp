@@ -4,7 +4,7 @@
 #pragma once
 
 #if defined(OPENTELEMETRY_STL_VERSION)
-#  if OPENTELEMETRY_STL_VERSION >= 2011
+#  if __cplusplus >= 201103L
 #    include "opentelemetry/std/type_traits.h"
 #    define OPENTELEMETRY_HAVE_STD_TYPE_TRAITS
 #  endif

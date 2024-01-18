@@ -4,7 +4,7 @@
 #pragma once
 
 #if defined(OPENTELEMETRY_STL_VERSION)
-#  if OPENTELEMETRY_STL_VERSION >= 2017
+#  if __cplusplus >= 201703L
 #    include "opentelemetry/std/string_view.h"
 #    define OPENTELEMETRY_HAVE_STD_STRING_VIEW
 #  endif

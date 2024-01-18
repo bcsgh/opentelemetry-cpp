@@ -4,7 +4,7 @@
 #pragma once
 
 #if defined(OPENTELEMETRY_STL_VERSION)
-#  if OPENTELEMETRY_STL_VERSION >= 2011
+#  if __cplusplus >= 201100
 #    include "opentelemetry/std/shared_ptr.h"
 #    define OPENTELEMETRY_HAVE_STD_SHARED_PTR
 #  endif

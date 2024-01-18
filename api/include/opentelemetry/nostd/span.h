@@ -5,7 +5,7 @@
 
 // Try to use either `std::span` or `gsl::span`
 #if defined(OPENTELEMETRY_STL_VERSION)
-#  if OPENTELEMETRY_STL_VERSION >= 2020
+#  if __cplusplus >= 202002L
 #    include <array>
 #    include <cstddef>
 #    include <iterator>
@@ -27,7 +27,7 @@
 #    if OPENTELEMETRY_OPTION_USE_STD_SPAN
 #      include "opentelemetry/std/span.h"
 #    endif
-#  endif /* OPENTELEMETRY_STL_VERSION >= 2020 */
+#  endif /* __cplusplus >= 202002L */
 #endif   /* OPENTELEMETRY_STL_VERSION */
 
 // Fallback to `nostd::span` if necessary

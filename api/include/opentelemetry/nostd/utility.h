@@ -4,7 +4,7 @@
 #pragma once
 
 #if defined(OPENTELEMETRY_STL_VERSION)
-#  if OPENTELEMETRY_STL_VERSION >= 2014
+#  if __cplusplus >= 201402L
 #    include "opentelemetry/std/utility.h"
 #    define OPENTELEMETRY_HAVE_STD_UTILITY
 #  endif

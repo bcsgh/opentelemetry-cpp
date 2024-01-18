@@ -6,7 +6,7 @@
 #include "opentelemetry/version.h"
 
 #if defined(OPENTELEMETRY_STL_VERSION)
-#  if OPENTELEMETRY_STL_VERSION >= 2017
+#  if __cplusplus >= 201704L
 #    include "opentelemetry/std/variant.h"
 #    define OPENTELEMETRY_HAVE_STD_VARIANT
 #  endif
