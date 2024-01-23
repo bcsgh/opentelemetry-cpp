@@ -57,10 +57,10 @@ def opentelemetry_cpp_deps():
     maybe(
         http_archive,
         name = "com_google_absl",
-        sha256 = "91ac87d30cc6d79f9ab974c51874a704de9c2647c40f6932597329a282217ba8",
-        strip_prefix = "abseil-cpp-20220623.1",
+        sha256 = "987ce98f02eefbaf930d6e38ab16aa05737234d7afbab2d5c4ea7adbe50c28ed",
+        strip_prefix = "abseil-cpp-20230802.1",
         urls = [
-            "https://github.com/abseil/abseil-cpp/archive/refs/tags/20220623.1.tar.gz",
+            "https://github.com/abseil/abseil-cpp/archive/refs/tags/20230802.1.tar.gz",
         ],
     )
 
@@ -88,10 +88,10 @@ def opentelemetry_cpp_deps():
     maybe(
         http_archive,
         name = "com_github_grpc_grpc",
-        sha256 = "cdeb805385fba23242bf87073e68d590c446751e09089f26e5e0b3f655b0f089",
-        strip_prefix = "grpc-1.49.2",
+        sha256 = "437068b8b777d3b339da94d3498f1dc20642ac9bfa76db43abdd522186b1542b",
+        strip_prefix = "grpc-1.60.0",  # 2023-11-27
         urls = [
-            "https://github.com/grpc/grpc/archive/v1.49.2.tar.gz",
+            "https://github.com/grpc/grpc/archive/v1.60.0.tar.gz",
         ],
     )
 
@@ -99,7 +99,7 @@ def opentelemetry_cpp_deps():
     maybe(
         http_archive,
         name = "com_github_opentelemetry_proto",
-        build_file = "@io_opentelemetry_cpp//bazel:opentelemetry_proto.BUILD",
+        build_file = "@io_opentelemetry_cpp//bazel:opentelemetry_proto.BUILD",#
         sha256 = "df491a05f3fcbf86cc5ba5c9de81f6a624d74d4773d7009d573e37d6e2b6af64",
         strip_prefix = "opentelemetry-proto-1.1.0",
         urls = [
@@ -111,7 +111,7 @@ def opentelemetry_cpp_deps():
     maybe(
         http_archive,
         name = "github_nlohmann_json",
-        build_file = "@io_opentelemetry_cpp//bazel:nlohmann_json.BUILD",
+        build_file = "@io_opentelemetry_cpp//bazel:nlohmann_json.BUILD",#
         sha256 = "e5c7a9f49a16814be27e4ed0ee900ecd0092bfb7dbfca65b5a421b774dccaaed",
         urls = [
             "https://github.com/nlohmann/json/releases/download/v3.11.2/include.zip",
@@ -122,10 +122,10 @@ def opentelemetry_cpp_deps():
     maybe(
         http_archive,
         name = "com_github_jupp0r_prometheus_cpp",
-        sha256 = "397544fe91e183029120b4eebcfab24ed9ec833d15850aae78fd5db19062d13a",
-        strip_prefix = "prometheus-cpp-1.1.0",
+        sha256 = "190734c4d8d0644c2af327ff8b5ef86cd7ea9074a48d777112394f558dd014f7",
+        strip_prefix = "prometheus-cpp-1.2.1",
         urls = [
-            "https://github.com/jupp0r/prometheus-cpp/archive/refs/tags/v1.1.0.tar.gz",
+            "https://github.com/jupp0r/prometheus-cpp/archive/refs/tags/v1.2.1.tar.gz",
         ],
     )
 
@@ -144,7 +144,7 @@ def opentelemetry_cpp_deps():
     maybe(
         http_archive,
         name = "curl",
-        build_file = "@io_opentelemetry_cpp//bazel:curl.BUILD",
+        build_file = "@io_opentelemetry_cpp//bazel:curl.BUILD",#
         sha256 = "816e41809c043ff285e8c0f06a75a1fa250211bbfb2dc0a037eeef39f1a9e427",
         strip_prefix = "curl-8.4.0",
         urls = [

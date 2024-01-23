@@ -43,6 +43,9 @@ cc_test(
         "jaeger_propagation_test.cc",
         "util.h",
     ],
+    copts = [
+        "--Wno-deprecated-declarations",
+    ],
     tags = [
         "api",
         "test",

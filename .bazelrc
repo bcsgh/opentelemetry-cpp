@@ -6,6 +6,7 @@
 
 # Needed by gRPC to build on some platforms.
 build --copt -DGRPC_BAZEL_BUILD
+build --copt -Wno-unused-but-set-variable
 
 # --config=asan : Address Sanitizer.
 common:asan --copt -DADDRESS_SANITIZER
